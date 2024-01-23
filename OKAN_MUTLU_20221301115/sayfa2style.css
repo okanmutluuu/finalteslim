@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #84bcda;
+    overflow: hidden;
+}
+
+nav a {
+    float: right;
+    display:block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration:solid;
+    }
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    background-color:  #84bcda;
+}
+
+.container h1 {
+    font-size: 40px;
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+    padding: 15px;
+    background-color: #84bcda;
+    text-transform: capitalize;
+}
+
+.container .image-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container .image-box .image {
+    height: 500px;
+    width: 400px;
+    border: 10px solid #ddd;
+    box-shadow: 0 5px 15px black;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container .image-box .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.container .image-box .image:hover img{ 
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+
+.container .pop-image {
+    position: fixed;
+    top: 0; left: 0;
+    background:  #84bcda;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.container .pop-image span {
+    position: absolute;
+    top:0; right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.container .pop-image img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+
+@media (max-width:768px){
+    .container .pop-image img{
+        width: 95%;
+    }
+}
+
